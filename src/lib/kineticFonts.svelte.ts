@@ -73,30 +73,40 @@ export class KineticTypeController {
 		}
 	}
 
+	#step() {
+		if (this.mode === 'unison') {
+			this.unisonIndex = (this.unisonIndex + 1) % FONT_SPECIMENS.length;
+			this.lastSpecimenLabel = FONT_SPECIMENS[this.unisonIndex].label;
+		} else {
+			const slot = Math.floor(Math.random() * this.#glyphCount);
+			const next = nextRandomIndex(this.glyphFonts[slot] ?? 0);
+			this.glyphFonts[slot] = next;
+			this.lastSpecimenLabel = FONT_SPECIMENS[next].label;
+		}
+	}
+
 	togglePlay() {
 		this.isPlaying = !this.isPlaying;
+		if (this.isPlaying) {
+			this.#tickCounter = 0;
+			this.#step();
+		}
 	}
 
 	readonly ticker: Attachment = () => {
 		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			return;
+			this.isPlaying = false;
 		}
 
 		const timer = window.setInterval(() => {
 			if (!this.isPlaying) return;
 			this.#tickCounter += 1;
 
-			if (this.mode === 'unison') {
-				if (this.#tickCounter % 3 !== 0) return;
-				this.unisonIndex = (this.unisonIndex + 1) % FONT_SPECIMENS.length;
-				this.lastSpecimenLabel = FONT_SPECIMENS[this.unisonIndex].label;
-			} else {
-				const slot = Math.floor(Math.random() * this.#glyphCount);
-				const next = nextRandomIndex(this.glyphFonts[slot] ?? 0);
-				this.glyphFonts[slot] = next;
-				this.lastSpecimenLabel = FONT_SPECIMENS[next].label;
+			if (this.mode === 'unison' && this.#tickCounter % 3 !== 0) {
+				return;
 			}
-		}, 280);
+			this.#step();
+		}, 140);
 
 		return () => window.clearInterval(timer);
 	};
