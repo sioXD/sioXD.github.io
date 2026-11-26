@@ -293,16 +293,104 @@
 		letter-spacing: 0.01em;
 	}
 
-	.glyph--gothic {
-		font-family: $font-gothic;
-		font-weight: 400;
-		font-size: 1.08em;
-	}
-
 	.glyph--major {
 		font-family: $font-major;
 		font-weight: 400;
 		font-size: 0.84em;
+	}
+
+	.glyph--shade {
+		font-family: $font-shade;
+		font-weight: 400;
+		font-size: 0.78em;
+	}
+
+	.glyph--dot {
+		font-family: $font-dot;
+		font-weight: 400;
+		font-size: 0.96em;
+	}
+
+	.glyph--playfair {
+		font-family: $font-playfair;
+		font-style: italic;
+		font-weight: 900;
+		font-size: 0.95em;
+	}
+
+	.glyph--monoton {
+		font-family: $font-monoton;
+		font-weight: 400;
+		font-size: 0.86em;
+	}
+
+	.glyph--chakra {
+		font-family: $font-chakra;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 0.92em;
+	}
+
+	.glyph--cinzel {
+		font-family: $font-cinzel;
+		font-weight: 700;
+		font-size: 0.94em;
+	}
+
+	.glyph--rubik {
+		font-family: $font-rubik;
+		font-weight: 400;
+		font-size: 0.72em;
+	}
+
+	.glyph--michroma {
+		font-family: $font-michroma;
+		font-weight: 400;
+		font-size: 0.76em;
+	}
+
+	.glyph--bangers {
+		font-family: $font-bangers;
+		font-weight: 400;
+		font-size: 1.12em;
+		letter-spacing: 0.03em;
+	}
+
+	.glyph--marker {
+		font-family: $font-marker;
+		font-weight: 400;
+		font-size: 0.9em;
+	}
+
+	.glyph--caveat {
+		font-family: $font-caveat;
+		font-weight: 400;
+		font-size: 1.08em;
+	}
+
+	.glyph--shantell {
+		font-family: $font-shantell;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 0.92em;
+	}
+
+	.glyph--boogaloo {
+		font-family: $font-boogaloo;
+		font-weight: 400;
+		font-size: 1.08em;
+	}
+
+	.glyph--luckiest {
+		font-family: $font-luckiest;
+		font-weight: 400;
+		font-size: 0.92em;
+	}
+
+	.glyph--tilt {
+		font-family: $font-tilt;
+		font-weight: 400;
+		font-size: 0.94em;
 	}
 
 	.hero__bottom {

@@ -11,8 +11,22 @@ export const FONT_SPECIMENS: FontSpecimen[] = [
 	{ id: 'syne', label: 'Syne Bold' },
 	{ id: 'pixel', label: 'Silkscreen' },
 	{ id: 'anton', label: 'Anton Condensed' },
-	{ id: 'gothic', label: 'Unifraktur' },
-	{ id: 'major', label: 'Major Mono' }
+	{ id: 'major', label: 'Major Mono' },
+	{ id: 'shade', label: 'Bungee Shade' },
+	{ id: 'dot', label: 'DotGothic16' },
+	{ id: 'playfair', label: 'Playfair Black' },
+	{ id: 'monoton', label: 'Monoton Inline' },
+	{ id: 'chakra', label: 'Chakra Petch' },
+	{ id: 'cinzel', label: 'Cinzel Roman' },
+	{ id: 'rubik', label: 'Rubik Mono One' },
+	{ id: 'michroma', label: 'Michroma Wide' },
+	{ id: 'bangers', label: 'Bangers' },
+	{ id: 'marker', label: 'Permanent Marker' },
+	{ id: 'caveat', label: 'Caveat Brush' },
+	{ id: 'shantell', label: 'Shantell Italic' },
+	{ id: 'boogaloo', label: 'Boogaloo' },
+	{ id: 'luckiest', label: 'Luckiest Guy' },
+	{ id: 'tilt', label: 'Tilt Warp' }
 ];
 
 function nextRandomIndex(current: number): number {
