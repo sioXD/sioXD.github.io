@@ -1,0 +1,31 @@
+// Breakpoints
+$bp-sm: 640px;
+$bp-md: 860px;
+$bp-lg: 1120px;
+
+// Layout
+$max-width: 1320px;
+$hairline: 1px;
+
+// Base Font Stacks
+$font-sans:
+	'Space Grotesk',
+	system-ui,
+	-apple-system,
+	BlinkMacSystemFont,
+	'Segoe UI',
+	sans-serif;
+$font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+$font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+// Kinetic Hero Specimen Fonts
+$font-syne: 'Syne', sans-serif;
+$font-anton: 'Anton', Impact, sans-serif;
+$font-pixel: 'Silkscreen', monospace;
+$font-gothic: 'UnifrakturMaguntia', Georgia, serif;
+$font-major: 'Major Mono Display', monospace;
+
+// Motion
+$ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+$transition-fast: 180ms $ease-editorial;
+$transition-base: 340ms $ease-editorial;

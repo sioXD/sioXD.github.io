@@ -1,0 +1,5 @@
+export { profile } from './data/profile.js';
+export type { ProfileData, ProjectItem } from './data/profile.js';
+export { default as KineticHero } from './components/KineticHero.svelte';
+export { default as Projects } from './components/Projects.svelte';
+export { default as Colophon } from './components/Colophon.svelte';
