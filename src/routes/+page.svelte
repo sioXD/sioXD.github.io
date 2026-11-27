@@ -1,12 +1,7 @@
 <script lang="ts">
-	import { Colophon, KineticHero, Projects, profile } from '#lib';
+	import { Colophon, KineticHero, Projects, ThemeController, profile } from '#lib';
 
-	let theme = $state<'dark' | 'light'>('dark');
-
-	function toggleTheme() {
-		theme = theme === 'dark' ? 'light' : 'dark';
-		document.documentElement.dataset.theme = theme;
-	}
+	const theme = new ThemeController();
 </script>
 
 <svelte:head>
@@ -14,9 +9,9 @@
 	<meta name="description" content="{profile.name}: {profile.statement}" />
 </svelte:head>
 
-<KineticHero {profile} {theme} onToggleTheme={toggleTheme} />
+<KineticHero {profile} theme={theme.current} onToggleTheme={() => theme.toggle()} />
 
-<main>
+<main {@attach theme.sync}>
 	<Projects projects={profile.projects} />
 </main>
 

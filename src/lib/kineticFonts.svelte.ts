@@ -108,10 +108,6 @@ export class KineticTypeController {
 	}
 
 	readonly ticker: Attachment = () => {
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			this.isPlaying = false;
-		}
-
 		const timer = window.setInterval(() => {
 			if (!this.isPlaying) return;
 			this.#tickCounter += 1;
