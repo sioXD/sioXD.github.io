@@ -28,7 +28,6 @@
 	<div class="hero__topbar">
 		<div class="hero__topbar-inner">
 			<div class="hero__id">
-				<span class="pulse-dot" aria-hidden="true"></span>
 				<span>00 // {profile.githubHandle.toUpperCase()}</span>
 			</div>
 
@@ -150,13 +149,6 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.55rem;
-	}
-
-	.pulse-dot {
-		width: 0.45rem;
-		height: 0.45rem;
-		border-radius: 50%;
-		background: var(--accent);
 	}
 
 	.hero__loc {
