@@ -114,6 +114,7 @@
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		border-bottom: $hairline solid var(--line);
+		overflow-x: clip;
 	}
 
 	.hero__topbar {
@@ -207,26 +208,36 @@
 	.hero__eyebrow {
 		@include mono-label;
 		display: flex;
-		flex-wrap: wrap;
+		align-items: center;
 		justify-content: space-between;
 		gap: 0.75rem;
 		color: var(--fg-muted);
 		padding-bottom: 0.85rem;
 		border-bottom: $hairline solid var(--line);
+		white-space: nowrap;
+		overflow: hidden;
 	}
 
 	.hero__hint {
 		color: var(--fg-subtle);
+		display: none;
+
+		@include respond-to(sm) {
+			display: inline;
+		}
 	}
 
 	.wordmark {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: 0.1em;
 		font-size: clamp(2.85rem, 11.8vw, 9.75rem);
+		height: 2.7em;
 		line-height: 1;
 		font-weight: 400;
 		user-select: none;
+		contain: layout;
 	}
 
 	.wordmark__line {
