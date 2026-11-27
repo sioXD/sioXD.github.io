@@ -9,6 +9,7 @@ export interface ProjectItem {
 	language: string;
 	techStack: string[];
 	repoUrl: string;
+	host?: 'GitHub' | 'Codeberg';
 	liveUrl?: string;
 }
 
@@ -23,6 +24,8 @@ export interface ProfileData {
 	email: string;
 	githubHandle: string;
 	githubUrl: string;
+	codebergHandle: string;
+	codebergUrl: string;
 	linkedinUrl: string;
 	projects: ProjectItem[];
 }
@@ -39,11 +42,43 @@ export const profile: ProfileData = {
 	email: 'simon.ziegler55@gmail.com',
 	githubHandle: 'sioXD',
 	githubUrl: 'https://github.com/sioXD',
+	codebergHandle: 's1o',
+	codebergUrl: 'https://codeberg.org/s1o',
 	linkedinUrl: 'https://linkedin.com/in/simon-ziegler',
 	projects: [
 		{
-			id: 'raspby-trade',
+			id: 'audiobook-maker',
 			index: '01',
+			title: 'audiobook_maker',
+			category: 'Rust / Audio & AI',
+			year: '2026',
+			description:
+				'Plattformübergreifende Web- und Desktop-Anwendung in Rust (Dioxus), die PDF-Dokumente mit Zusatzfunktionen lokal in Hörbücher umwandelt.',
+			architectureNote:
+				'Kombiniert Dioxus für Web & Desktop mit Pdfium zur PDF-Extraktion und Kokoro TTS (Sherpa-ONNX) für lokale Sprachsynthese.',
+			language: 'Rust',
+			techStack: ['Rust', 'Dioxus', 'Pdfium', 'Kokoro TTS', 'ONNX'],
+			repoUrl: 'https://codeberg.org/s1o/audiobook_maker',
+			host: 'Codeberg'
+		},
+		{
+			id: 'tetris-assembler',
+			index: '02',
+			title: 'tetris_assembler',
+			category: 'Embedded / Low-Level',
+			year: '2026',
+			description:
+				'Vollständige Umsetzung von Tetris in nativem Assembler für den 8-Bit-Mikrocontroller MCU 8051.',
+			architectureNote:
+				'Direkte Register-, Speicher- und Timing-Steuerung auf Hardware-Ebene ohne Hochsprachen-Abstraktion.',
+			language: 'Assembly',
+			techStack: ['8051 Assembly', 'MCU 8051', 'Embedded', 'Low-Level'],
+			repoUrl: 'https://codeberg.org/s1o/tetris_assembler',
+			host: 'Codeberg'
+		},
+		{
+			id: 'raspby-trade',
+			index: '03',
 			title: 'Raspby-Trade',
 			category: 'ML / Embedded',
 			year: '2025',
@@ -57,7 +92,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'dioxus-upload',
-			index: '02',
+			index: '04',
 			title: 'dioxus_file_upload_demo',
 			category: 'Rust / Fullstack',
 			year: '2025',
@@ -71,7 +106,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'react-spring-postgres',
-			index: '03',
+			index: '05',
 			title: 'react_spring-boot_postgres',
 			category: 'Full-Stack System',
 			year: '2024',
@@ -85,7 +120,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'gitlab-timetool',
-			index: '04',
+			index: '06',
 			title: 'gitlab-timetool',
 			category: 'Developer Tooling',
 			year: '2025',
@@ -99,7 +134,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'youtube-speed-slider',
-			index: '05',
+			index: '07',
 			title: 'YouTube-Speed-Slider',
 			category: 'Browser Extension',
 			year: '2025',
@@ -113,7 +148,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'sveltekit-weather',
-			index: '06',
+			index: '08',
 			title: 'SvelteKit-WeatherApp',
 			category: 'Web Application',
 			year: '2024',
@@ -127,7 +162,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'tradebot-compare',
-			index: '07',
+			index: '09',
 			title: 'tradebot-compare',
 			category: 'Data & Evaluation',
 			year: '2025',
@@ -141,7 +176,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'pdf-changer',
-			index: '08',
+			index: '10',
 			title: 'PDF_changer',
 			category: 'Document Utility',
 			year: '2024',
@@ -154,7 +189,7 @@ export const profile: ProfileData = {
 		},
 		{
 			id: 'languagetool-auth',
-			index: '09',
+			index: '11',
 			title: 'languagetool-auth',
 			category: 'Self-Hosting / Infra',
 			year: '2025',

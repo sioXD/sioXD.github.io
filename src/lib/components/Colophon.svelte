@@ -39,6 +39,9 @@
 				<a href={profile.githubUrl} target="_blank" rel="external noreferrer">
 					GITHUB / {profile.githubHandle.toUpperCase()} ↗
 				</a>
+				<a href={profile.codebergUrl} target="_blank" rel="external noreferrer">
+					CODEBERG / {profile.codebergHandle.toUpperCase()} ↗
+				</a>
 				<a href={profile.linkedinUrl} target="_blank" rel="external noreferrer">LINKEDIN ↗</a>
 			</div>
 		</div>

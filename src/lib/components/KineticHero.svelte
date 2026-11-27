@@ -96,6 +96,9 @@
 				<a class="hero__link" href={profile.githubUrl} target="_blank" rel="external noreferrer">
 					GITHUB ↗
 				</a>
+				<a class="hero__link" href={profile.codebergUrl} target="_blank" rel="external noreferrer">
+					CODEBERG ↗
+				</a>
 				<a class="hero__link" href={profile.linkedinUrl} target="_blank" rel="external noreferrer">
 					LINKEDIN ↗
 				</a>

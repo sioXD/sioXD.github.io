@@ -135,7 +135,7 @@
 										target="_blank"
 										rel="external noreferrer"
 									>
-										OPEN GITHUB REPOSITORY ↗
+										OPEN {(project.host ?? 'GitHub').toUpperCase()} REPOSITORY ↗
 									</a>
 									{#if project.liveUrl}
 										<a
