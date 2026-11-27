@@ -260,7 +260,7 @@
 			background-color $transition-fast,
 			color $transition-fast;
 
-		&:hover {
+		&:not(.is-open):hover {
 			background: var(--invert-bg);
 			color: var(--invert-fg);
 
@@ -285,26 +285,33 @@
 				border-color: var(--invert-fg);
 				color: var(--invert-fg);
 			}
-
-			.ledger-row__drawer {
-				border-top-color: rgba(128, 128, 128, 0.35);
-			}
-
-			.drawer-label,
-			.drawer-text {
-				color: var(--invert-fg);
-			}
-
-			.stack-list li,
-			.drawer-link {
-				border-color: var(--invert-fg);
-				color: var(--invert-fg);
-			}
 		}
 	}
 
 	.ledger-row.is-open {
 		background: var(--bg-elevated);
+		color: var(--fg);
+
+		.ledger-row__title {
+			font-family: $font-serif;
+			font-style: italic;
+			font-weight: 400;
+		}
+
+		.action-toggle,
+		.repo-link,
+		.drawer-link {
+			transition:
+				background-color $transition-fast,
+				color $transition-fast,
+				border-color $transition-fast;
+
+			&:hover {
+				background: var(--invert-bg);
+				color: var(--invert-fg);
+				border-color: var(--invert-bg);
+			}
+		}
 	}
 
 	.ledger-row__main {
