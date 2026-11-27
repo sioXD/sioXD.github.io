@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ProfileData } from '#lib/data/profile.js';
+	import { createDynamicFavicon } from '#lib/dynamicFavicon.svelte.js';
 	import { KineticTypeController } from '#lib/kineticFonts.svelte.js';
 
 	interface Props {
@@ -13,9 +14,17 @@
 	let firstChars = $derived(Array.from(profile.firstName));
 	let lastChars = $derived(Array.from(profile.lastName));
 	let kinetic = $derived(new KineticTypeController(firstChars.length + lastChars.length));
+
+	const syncFavicon = createDynamicFavicon(() => ({
+		firstChar: firstChars[0] ?? 'S',
+		secondChar: lastChars[0] ?? 'Z',
+		firstFontId: kinetic.getSpecimen(0).id,
+		secondFontId: kinetic.getSpecimen(firstChars.length).id,
+		theme
+	}));
 </script>
 
-<header class="hero" {@attach kinetic.ticker}>
+<header class="hero" {@attach kinetic.ticker} {@attach syncFavicon}>
 	<div class="hero__topbar">
 		<div class="hero__topbar-inner">
 			<div class="hero__id">
